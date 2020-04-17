@@ -70,7 +70,7 @@ on("ready", function () {
                         }
                         if (deltaS > 1000) {
                             ++sec;
-                            let h = 2 - Math.floor(sec / 3600);
+                            let h = parseInt(key[6] || 0) - Math.floor(sec / 3600);
                             if (h < 10) h = '0' + h;
                             let m = 59 - Math.floor((sec / 60) % 60);
                             let s = 59 - Math.floor(sec % 60);
